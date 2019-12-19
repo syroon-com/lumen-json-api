@@ -26,7 +26,8 @@ $router->resource('users', [
     ]
 ]);
 ```
-This will create the following routes (controller namespaces may vary depending on your application setup):<br>
+This will create the following routes (controller namespaces may vary, depending on your application setup):<br>
+
 | Action | Method | URI | Controller@Method |
 | ------ | ------ | --- | ---------- |
 | ACTION_CREATE | POST | / | App\Http\Controllers\UsersController@store |

@@ -1,0 +1,36 @@
+{
+    "name": "syroon-com/lumen-json-api",
+    "description": "A JSON API wrapper for the Lumen framework.",
+    "type": "library",
+    "license": "Apache-2.0",
+    "keywords": [
+        "lumen", "api", "json"
+    ],
+    "authors": [
+        {
+            "name": "Tino Groszewski",
+            "email": "tino@groszewski.dev",
+            "homepage": "https://groszewski.dev",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Syroon\\JsonApi\\": "src/"
+        }
+    },
+    "require": {
+        "neomerx/json-api": "4.0.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Syroon\\JsonApi\\ServiceProvider"
+            ],
+            "aliases": {
+                "JsonApi": "Syroon\\JsonApi\\JsonApiServiceProvider"
+            }
+        }
+    }
+}

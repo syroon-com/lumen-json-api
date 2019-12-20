@@ -20,7 +20,8 @@ class Router extends \Laravel\Lumen\Routing\Router
     public function resource(string $name, array $options): self
     {
         $this->group([
-            'prefix' => $name
+            'prefix' => $name,
+            'middleware' => ['parseJsonResource'],
         ], static function (self $router) use ($name, $options) {
             $controller = ucfirst($name) . 'Controller';
             foreach (Arr::get($options, 'actions', []) as $method) {
